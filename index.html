@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invernaderos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <h1><img src="img/Agrico.png" alt="Agrico Logo"></h1>
+        <div class="greenhouse" id="greenhouse1" onclick="viewGreenhouse('2OTE')">
+            <h2>2OTE</h2>
+        </div>
+        <div class="greenhouse" id="greenhouse2" onclick="viewGreenhouse('2PTE')">
+            <h2>2PTE</h2>
+        </div>
+        <div class="greenhouse" id="greenhouse3" onclick="viewGreenhouse('3PTE')">
+            <h2>3PTE</h2>
+        </div>
+        <div class="greenhouse" id="scanCode" onclick="scanCode()">
+            <h2>Escanear Código</h2>
+        </div>
+    </div>
+    
+    <div class="details" id="details">
+        <h2 id="greenhouseTitle"></h2>
+        <p>Seleccione una opción</p>
+        <div class="options" id="optionsContainer">
+            <!-- Los botones se generarán dinámicamente -->
+        </div>
+        <button id="bottomBackButton" onclick="goBack()">Volver</button>
+    </div>
+
+    <!-- Contenedores específicos para cada sección -->
+    <div class="details" id="electricContent2OTE">
+        <h2>Eléctricos 2 OTE</h2>
+        <p>Contenido específico para Eléctricos 2 OTE</p>
+        <div class="button-container">
+            <button class="goBack electric-back-button" onclick="goBackToDetails()">Volver</button>
+            <button class="goToMain electric-home-button" onclick="goBackToMain()">Inicio</button>
+        </div>
+        <div class="sections-container">
+            <!-- Secciones numeradas -->
+
+            <div class="section-box">
+
+              <img class="section-image" src="img/C12OTE.png" id="image1" alt="C12OTE">
+              <div class="text-overlay">01</div>
+              <div class="Text-name">Zaid Hernandez Segura</div>
+              <div class="Text-status">Activo</div>
+              <div class="text-Date Baterias">11/11/11</div>
+              <div class="text-Date MicroSwitch">11/11/11</div>
+              <div class="text-Date Paro">11/11/11</div>
+              <div class="text-Date Potenciometro">11/11/11</div>
+              <div class="text-Date Selector">11/11/11</div>
+              <div class="text-Date Anderson">11/11/11</div>
+              <div class="text-Date Indicador">11/11/11</div>
+              <div class="text-Date Tarjeta">11/11/11</div>
+            </div>
+  
+            <div class="section-box">
+              <img class="section-image" src="img/C12OTE.png" id="image2"alt="C22OTE">
+              <div class="text-overlay">02</div>
+              <div class="Text-name">Zaid Hernandez Segura</div>
+              <div class="Text-status">Activo</div>
+              <div class="text-Date Baterias">11/11/11</div>
+              <div class="text-Date MicroSwitch">11/11/11</div>
+              <div class="text-Date Paro">11/11/11</div>
+              <div class="text-Date Potenciometro">11/11/11</div>
+              <div class="text-Date Selector">11/11/11</div>
+              <div class="text-Date Anderson">11/11/11</div>
+              <div class="text-Date Indicador">11/11/11</div>
+              <div class="text-Date Tarjeta">11/11/11</div>
+            </div>
+
+            <div class="section-box">
+              <img class="section-image" src="img/C12OTE.png" id="image3" alt="C32OTE">
+              <div class="text-overlay">03</div>
+              <div class="Text-name">Zaid Hernandez Segura</div>
+              <div class="Text-status">Activo</div>
+              <div class="text-Date Baterias">11/11/11</div>
+              <div class="text-Date MicroSwitch">11/11/11</div>
+              <div class="text-Date Paro">11/11/11</div>
+              <div class="text-Date Potenciometro">11/11/11</div>
+              <div class="text-Date Selector">11/11/11</div>
+              <div class="text-Date Anderson">11/11/11</div>
+              <div class="text-Date Indicador">11/11/11</div>
+              <div class="text-Date Tarjeta">11/11/11</div>
+            </div>
+
+            <div class="section-box">
+              <img class="section-image" src="img/C12OTE.png" id="image4"alt="C22OTE">
+              <div class="text-overlay">04</div>
+              <div class="Text-name">Zaid Hernandez Segura</div>
+              <div class="Text-status">Activo</div>
+              <div class="text-Date Baterias">11/11/11</div>
+              <div class="text-Date MicroSwitch">11/11/11</div>
+              <div class="text-Date Paro">11/11/11</div>
+              <div class="text-Date Potenciometro">11/11/11</div>
+              <div class="text-Date Selector">11/11/11</div>
+              <div class="text-Date Anderson">11/11/11</div>
+              <div class="text-Date Indicador">11/11/11</div>
+              <div class="text-Date Tarjeta">11/11/11</div>
+            </div>
+
+            <div class="section-box">
+              <img class="section-image" src="img/C12OTE.png" id="image5"alt="C22OTE">
+              <div class="text-overlay">05</div>
+              <div class="Text-name">Zaid Hernandez Segura</div>
+              <div class="Text-status">Activo</div>
+              <div class="text-Date Baterias">11/11/11</div>
+              <div class="text-Date MicroSwitch">11/11/11</div>
+              <div class="text-Date Paro">11/11/11</div>
+              <div class="text-Date Potenciometro">11/11/11</div>
+              <div class="text-Date Selector">11/11/11</div>
+              <div class="text-Date Anderson">11/11/11</div>
+              <div class="text-Date Indicador">11/11/11</div>
+              <div class="text-Date Tarjeta">11/11/11</div>
+            </div>
+
+
+
+        </div>
+    </div>
+    
+    <div class="details" id="electricContent2PTE">
+        <h2>Eléctricos 2 PTE</h2>
+        <p>Contenido específico para Eléctricos 2 PTE</p>
+        <div class="button-container">
+            <button class="goBack electric-back-button" onclick="goBackToDetails()">Volver</button>
+            <button class="goToMain electric-home-button" onclick="goBackToMain()">Inicio</button>
+        </div>
+    </div>
+
+    <div class="details" id="electricContent3PTE">
+        <h2>Eléctricos 3 PTE</h2>
+        <p>Contenido específico para Eléctricos 3 PTE</p>
+        <div class="button-container">
+            <button class="goBack electric-back-button" onclick="goBackToDetails()">Volver</button>
+            <button class="goToMain electric-home-button" onclick="goBackToMain()">Inicio</button>
+        </div>
+    </div>
+
+    <div class="details" id="hydraulicContent2OTE">
+        <h2>Hidráulicos 2 OTE</h2>
+        <p>Contenido específico para Hidráulicos 2 OTE</p>
+        <div class="button-container">
+            <button class="goBack hydraulic-back-button" onclick="goBackToDetails()">Volver</button>
+            <button class="goToMain hydraulic-home-button" onclick="goBackToMain()">Inicio</button>
+        </div>
+    </div>
+
+    <div class="details" id="hydraulicContent2PTE">
+        <h2>Hidráulicos 2 PTE</h2>
+        <p>Contenido específico para Hidráulicos 2 PTE</p>
+        <div class="button-container">
+            <button class="goBack hydraulic-back-button" onclick="goBackToDetails()">Volver</button>
+            <button class="goToMain hydraulic-home-button" onclick="goBackToMain()">Inicio</button>
+        </div>
+    </div>
+
+    <div class="details" id="hydraulicContent3PTE">
+        <h2>Hidráulicos 3 PTE</h2>
+        <p>Contenido específico para Hidráulicos 3 PTE</p>
+        <div class="button-container">
+            <button class="goBack hydraulic-back-button" onclick="goBackToDetails()">Volver</button>
+            <button class="goToMain hydraulic-home-button" onclick="goBackToMain()">Inicio</button>
+        </div>
+    </div>
+
+    <div class="details" id="loadersContent2OTE">
+        <h2>Cargadores 2 OTE</h2>
+        <p>Contenido específico para Cargadores 2 OTE</p>
+        <div class="button-container">
+            <button class="goBack loaders-back-button" onclick="goBackToDetails()">Volver</button>
+            <button class="goToMain loaders-home-button" onclick="goBackToMain()">Inicio</button>
+        </div>
+    </div>
+
+    <div class="details" id="loadersContent2PTE">
+        <h2>Cargadores 2 PTE</h2>
+        <p>Contenido específico para Cargadores 2 PTE</p>
+        <div class="button-container">
+            <button class="goBack loaders-back-button" onclick="goBackToDetails()">Volver</button>
+            <button class="goToMain loaders-home-button" onclick="goBackToMain()">Inicio</button>
+        </div>
+    </div>
+
+    <div class="details" id="loadersContent3PTE">
+        <h2>Cargadores 3 PTE</h2>
+        <p>Contenido específico para Cargadores 3 PTE</p>
+        <div class="button-container">
+            <button class="goBack loaders-back-button" onclick="goBackToDetails()">Volver</button>
+            <button class="goToMain loaders-home-button" onclick="goBackToMain()">Inicio</button>
+        </div>
+    </div>
+
+    <!-- //////Nueva sección para "Escanear código/////" -->
+
+
+<div class="details" id="scanCodeContent">
+    <h2>Escanear código</h2>
+    <p>Aquí puedes escanear un código.</p>
+    <input type="text" id="imageIdInput" placeholder="Ingrese ID">
+    <button onclick="goToImageById()">Ir</button>
+    <div class="button-container">
+        <button class="goBack" onclick="goBack()">Volver</button>
+    </div>
+
+    <!-- Sección de escaneo de código QR -->
+    <div class="scanner-container">
+        <div id="qr-reader" class="qr-reader">
+            <div id="qr-scan-area" class="qr-scan-area"></div>
+        </div>
+        <div id="qr-reader-results"></div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+

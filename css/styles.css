@@ -1,0 +1,362 @@
+/* Estilos generales del cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    background-color: #dbffff; /* Color de fondo */
+}
+
+/* Estilos del contenedor principal */
+.container {
+    text-align: center;
+    max-width: 600px; /* Ancho máximo del contenedor principal */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos del título principal */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Estilos de los invernaderos y botones generales */
+.greenhouse, .greenhouse-button {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #e0f7fa; /* Fondo igual al color de fondo del body */
+    border-radius: 15px; /* Redondea las esquinas */
+    box-shadow: 0 4 px 8px rgba(0,0,0,0.2);
+    cursor: pointer; /* Hace que el recuadro sea clickeable */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 60px; /* Ajusta la altura del recuadro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo específico para los botones 2PTE, 2OTE y 3PTE */
+#greenhouse2,
+#greenhouse1,
+#greenhouse3,
+#scanCode {
+    background-color: #80B7FF; /* Color verde para estos botones */
+    color: #fff; /* Texto blanco */
+}
+
+/* Efecto de hover sobre los botones 2PTE, 2OTE y 3PTE */
+#greenhouse2:hover,
+#greenhouse1:hover,
+#greenhouse3:hover,
+#scanCode:hover {
+    background-color: #6C9BD9; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos específicos para botones generales */
+button.greenhouse-button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #80B7FF; /* Fondo igual al color de fondo del body */
+    color: #fff; /* Texto blanco */
+    border-radius: 8px;
+    font-size: 1.2em;
+    width: 250px; /* Ancho fijo para alinear correctamente */
+    height: 80px;
+    margin: 30px 0; /* Espaciado entre botones */
+    display: block; /* Mostrar como bloque para estar uno debajo del otro */
+    cursor: pointer;
+}
+
+/* Efecto de hover sobre los botones generales */
+button.greenhouse-button:hover {
+    background-color: #6F9FDE; /* Cambio de color al pasar el cursor */
+    color: #fff; /* Texto blanco */
+}
+
+
+/* Estilos del botón "Volver" en la sección de detalles */
+#bottomBackButton {
+    margin-top: 20px;
+    background-color: #80B7FF; /* Fondo igual al color de fondo del body */
+    color: #fff; /* Texto blanco */
+    padding: 15px 30px;
+    border: none; /* Eliminamos el borde */
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición para suavizar el cambio de fondo */
+}
+
+/* Estilos del botón "Volver" con el cursor encima */
+#bottomBackButton:hover {
+    background-color: #6C9BD9; /* Fondo azul más claro al pasar el cursor */
+}
+
+
+/* Estilos de la sección de detalles */
+.details {
+    display: none;
+    text-align: center;
+    font-size: 20px; /* Puedes cambiar 20px por el tamaño que desees */
+}
+
+
+/* Estilos del contenedor de botones en las secciones de detalles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos generales para los botones "Volver" y "Inicio" */
+button.goBack {
+    padding: 10px 20px;
+    border: none;
+    background-color: #FF6347; /* Color rojo tomate */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px; /* Añadir margen alrededor del botón */
+}
+
+/* Estilos para el hover en los botones "Volver" */
+button.goBack:hover {
+    background-color: #FF7F50; /* Rojo más claro */
+    transform: scale(1.05); /* Escalar ligeramente */
+}
+
+/* Estilos generales para los botones "Inicio" */
+button.goToMain {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4682B4; /* Color azul acero */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px; /* Añadir margen alrededor del botón */
+}
+
+/* Estilos para el hover en los botones "Inicio" */
+button.goToMain:hover {
+    background-color: #5A9BD4; /* Azul más claro */
+    transform: scale(1.05); /* Escalar ligeramente */
+}
+
+/* Estilos del contenedor de secciones */
+.sections-container {
+    max-height: 350px; /* Altura máxima del contenedor de secciones */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+    -ms-overflow-style: none; /* Oculta la barra de desplazamiento en IE/Edge */
+    margin: 40px 0 10px; /* Margen vertical ajustado: 40px arriba, 10px abajo */
+    padding: 1px 0; /* Añadir padding para dar espacio para el efecto de escala */
+}
+
+.sections-container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en WebKit (Chrome, Safari, etc.) */
+}
+
+/* Estilos de los recuadros de secciones */
+.section-box {
+    position: relative; /* Necesario para la superposición del texto */
+    background-color: none; /* Color de fondo */
+    border: 1px solid none; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1px; /* Espaciado interno ajustado para hacer el diseño más compacto */
+    margin-bottom: 20px; /* Margen inferior aumentado */
+    font-size: 1.2em; /* Tamaño de fuente reducido para hacer el diseño más compacto */
+    transition: transform 0.3s ease;
+}
+
+.section-box.in-view {
+    transform: scale(1.25); /* Aumenta el tamaño al 120% cuando está en vista */
+}
+
+/* Estilos de las imágenes en las secciones */
+.section-image {
+    width: 80%; /* Ajusta el ancho al 80% del contenedor */
+    height: auto; /* Ajusta automáticamente la altura proporcionalmente */
+    max-width: 400px; /* Establece un ancho máximo para la imagen */
+    max-height: 200px; /* Establece una altura máxima para la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-bottom: 5px; /* Margen inferior */
+}
+
+/* Estilos para el texto sobre las imágenes */
+.text-overlay {
+    position: absolute;
+    top: 10.5px; /* Ajusta la posición vertical del texto */
+    left: 54px; /* Ajusta la posición horizontal del texto */
+    color: white; /* Color del texto */
+    background-color: none; /* Fondo semitransparente */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.6em; /* Tamaño de la fuente */
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+    font-weight: bold; /* Establece el texto en negritas */
+}
+
+/* Estilos para el texto sobre las imágenes */
+.Text-name {
+    position: absolute;
+    top: 21px; /* Ajusta la posición vertical del texto */
+    left: 194px; /* Ajusta la posición horizontal del texto */
+    color: black; /* Color del texto */
+    background-color: none; /* Fondo semitransparente */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.4em; /* Tamaño de la fuente */
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+    font-weight: bold; /* Establece el texto en negritas */
+    font-family: Calibri; /* Cambia el tipo de fuente */
+}
+
+/* Estilos para el texto sobre las imágenes */
+.Text-status {
+    position: absolute;
+    top: 35px; /* Ajusta la posición vertical del texto */
+    left: 277px; /* Ajusta la posición horizontal del texto */
+    color: black; /* Color del texto */
+    background-color: none; /* Fondo semitransparente */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.4em; /* Tamaño de la fuente */
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+    font-weight: bold; /* Establece el texto en negritas */
+    font-family: Calibri; /* Cambia el tipo de fuente */
+}
+
+.text-Date {
+    position: absolute;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.38em;
+    font-weight: bold;
+    font-family: Calibri;
+    z-index: 1;
+}
+
+.Baterias {
+    top: 94px; /* Ajusta la posición vertical del primer texto */
+    left: 133.5px; /* Ajusta la posición horizontal del primer texto */
+}
+
+.MicroSwitch {
+    top: 94px; /* Ajusta la posición vertical del segundo texto */
+    left: 188.5px; /* Ajusta la posición horizontal del segundo texto */
+}
+
+.Paro {
+    top: 94px; /* Ajusta la posición vertical del tercer texto */
+    left: 241.5px; /* Ajusta la posición horizontal del tercer texto */
+}
+
+.Potenciometro {
+    top: 94px; /* Ajusta la posición vertical del cuarto texto */
+    left: 294.5px; /* Ajusta la posición horizontal del cuarto texto */
+}
+
+.Selector {
+    top: 145px; /* Ajusta la posición vertical del quinto texto */
+    left: 133.5px; /* Ajusta la posición horizontal del quinto texto */
+}
+
+.Anderson {
+    top: 145px; /* Ajusta la posición vertical del sexto texto */
+    left: 188.5px; /* Ajusta la posición horizontal del sexto texto */
+}
+
+.Indicador {
+    top: 145px; /* Ajusta la posición vertical del séptimo texto */
+    left: 241.5px; /* Ajusta la posición horizontal del séptimo texto */
+}
+
+.Tarjeta {
+    top: 145px; /* Ajusta la posición vertical del octavo texto */
+    left: 294.5px; /* Ajusta la posición horizontal del octavo texto */
+}
+
+
+/* Estilos para la sección "Escanear código" */
+#scanCodeContent {
+    display: none;
+    text-align: center;
+}
+
+#scanCodeContent h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+#scanCodeContent p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+/* Estilos para el contenedor principal del escáner */
+.scanner-container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el elemento de la vista previa del escáner */
+.qr-reader {
+    position: relative; /* Posición relativa para contener elementos internos */
+    width: 80%; /* Ancho del 80% del contenedor padre */
+    max-width: 400px; /* Ancho máximo de 400px */
+    margin: 20px auto; /* Margen 20px arriba/abajo y centrado horizontalmente */
+    overflow: hidden; /* Ocultar contenido que exceda las dimensiones */
+    border: 2px dashed #ddd; /* Borde punteado gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para el área de escaneo dentro del elemento de la vista previa */
+.qr-scan-area {
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    top: 50%; /* Alinea desde la mitad superior */
+    left: 50%; /* Alinea desde la mitad izquierda */
+    transform: translate(-50%, -50%); /* Centra el área de escaneo */
+    width: 80%; /* Ancho del 80% del contenedor */
+    height: 80%; /* Altura del 80% del contenedor */
+    border: 2px dashed #ddd; /* Borde punteado gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar contenido que exceda las dimensiones */
+    box-sizing: border-box; /* Incluye el borde en el tamaño total */
+}
+
+/* Estilo para el área de escaneo con marco verde */
+.qr-scan-area.scanning {
+    border-color: #4CAF50; /* Cambia el borde a verde cuando se está escaneando */
+    animation: pulse 1s infinite alternate; /* Animación de pulso */
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Estilos para los resultados del escaneo de QR */
+#qr-reader-results {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
