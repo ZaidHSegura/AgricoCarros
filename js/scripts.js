@@ -97,8 +97,10 @@ function scanCode() {
     document.querySelector('#scanCodeContent').style.display = 'block';
 
     // Limpiar el valor del input
-    imageIdInput.value = '';
+    document.getElementById('imageIdInput').value = '';
 
+    // Limpiar el resultado del escaneo
+    document.getElementById('qr-reader-results').innerText = '';
 
     // Inicializar el escáner de QR cuando se accede a la sección de escanear código
     let html5QrCode = new Html5Qrcode("qr-reader");
@@ -134,6 +136,13 @@ function isElementInContainerView(element, container) {
 function goToImageById() {
     var imageIdInput = document.getElementById('imageIdInput');
     var imageId = imageIdInput.value;
+
+    if (imageId.trim() === '') {
+        // Mostrar mensaje de alerta si no hay ningún ID en el input
+        alert('No se ha escaneado ningún ID');
+        return;
+    }
+
     var imageElement = document.getElementById(imageId);
 
     if (imageElement) {
