@@ -91,6 +91,8 @@ function goBackToMain() {
     hideAllDetails();
 }
 
+let html5QrCode; // Mover la variable fuera de la función para un mejor alcance
+
 function scanCode() {
     // Ocultar el contenedor principal y mostrar el contenido de escanear código
     document.querySelector('#mainContainer').style.display = 'none';
@@ -103,7 +105,7 @@ function scanCode() {
     document.getElementById('qr-reader-results').innerText = '';
 
     // Inicializar el escáner de QR cuando se accede a la sección de escanear código
-    let html5QrCode = new Html5Qrcode("qr-reader");
+    html5QrCode = new Html5Qrcode("qr-reader");
 
     html5QrCode.start(
         { facingMode: "environment" }, // Puede ser "user" para la cámara frontal
@@ -140,6 +142,24 @@ function goToImageById() {
     if (imageId.trim() === '') {
         // Mostrar mensaje de alerta si no hay ningún ID en el input
         alert('No se ha escaneado ningún ID');
+
+        // Reiniciar el escáner de QR
+        html5QrCode.stop().then(ignore => {
+            html5QrCode.start(
+                { facingMode: "environment" }, // Puede ser "user" para la cámara frontal
+                {
+                    fps: 10, // Frecuencia de escaneo
+                    qrbox: { width: 300, height: 300 } // Dimensiones del área de escaneo
+                },
+                onScanSuccess,
+                onScanFailure
+            ).catch(err => {
+                console.error(`No se pudo reiniciar el escaneo: ${err}`);
+            });
+        }).catch(err => {
+            console.error(`No se pudo detener el escaneo: ${err}`);
+        });
+
         return;
     }
 
@@ -169,6 +189,19 @@ function goToImageById() {
     } else {
         alert('ID de imagen no encontrado');
     }
+}
+
+// Asegúrate de definir las funciones onScanSuccess y onScanFailure
+function onScanSuccess(decodedText, decodedResult) {
+    // Manejar el resultado del escaneo aquí
+    console.log(`Código escaneado con éxito: ${decodedText}`);
+    document.getElementById('imageIdInput').value = decodedText;
+    // Puedes llamar a goToImageById() aquí si deseas redirigir automáticamente
+}
+
+function onScanFailure(error) {
+    // Manejar errores de escaneo aquí
+    console.warn(`Error en el escaneo: ${error}`);
 }
 
 
