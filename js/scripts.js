@@ -96,6 +96,10 @@ function scanCode() {
     document.querySelector('#mainContainer').style.display = 'none';
     document.querySelector('#scanCodeContent').style.display = 'block';
 
+    // Limpiar el valor del input
+    imageIdInput.value = '';
+
+
     // Inicializar el escáner de QR cuando se accede a la sección de escanear código
     let html5QrCode = new Html5Qrcode("qr-reader");
 
