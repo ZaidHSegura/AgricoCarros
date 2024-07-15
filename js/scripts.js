@@ -128,7 +128,8 @@ function isElementInContainerView(element, container) {
 }
 
 function goToImageById() {
-    var imageId = document.getElementById('imageIdInput').value;
+    var imageIdInput = document.getElementById('imageIdInput');
+    var imageId = imageIdInput.value;
     var imageElement = document.getElementById(imageId);
 
     if (imageElement) {
@@ -138,18 +139,25 @@ function goToImageById() {
         // Mostrar la sección correspondiente (en este caso, Eléctricos 2 OTE)
         document.querySelector('#electricContent2OTE').style.display = 'block';
 
-       // Desplazarse a la imagen y centrarla verticalmente
-       imageElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Desplazarse a la imagen y centrarla verticalmente
+        imageElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
         // Resaltar la imagen (opcional)
         imageElement.style.border = '2px solid green';
         setTimeout(() => {
             imageElement.style.border = '';
         }, 2000);
+
+        // Limpiar el valor del input
+        imageIdInput.value = '';
+
+        // Limpiar el resultado del escaneo
+        document.getElementById('qr-reader-results').innerText = '';
     } else {
         alert('ID de imagen no encontrado');
     }
 }
+
 
 // Función para aplicar el efecto de aumento de tamaño
 function applyScrollEffect() {
@@ -189,14 +197,7 @@ function onScanSuccess(decodedText, decodedResult) {
         qrReader.classList.remove('scanning');
     }, 2000); // 2 segundos
 
-    // Simular un clic en el botón "Ir" después de actualizar el campo de texto
-    var goToImageButton = document.getElementById('goToImageButton');
-    if (goToImageButton) {
-        goToImageButton.click();
-    } else {
-        console.warn('No se encontró el botón "Ir".');
-    }
-}
+ }
 
 function onScanFailure(error) {
     // Maneja la falla del escaneo, usualmente es mejor ignorarlo y seguir escaneando.
