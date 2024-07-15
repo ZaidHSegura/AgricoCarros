@@ -91,6 +91,7 @@ function goBackToMain() {
     hideAllDetails();
 }
 
+
 let html5QrCode; // Mover la variable fuera de la función para un mejor alcance
 
 function scanCode() {
@@ -104,20 +105,22 @@ function scanCode() {
     // Limpiar el resultado del escaneo
     document.getElementById('qr-reader-results').innerText = '';
 
-    // Inicializar el escáner de QR cuando se accede a la sección de escanear código
-    html5QrCode = new Html5Qrcode("qr-reader");
+    // Inicializar el escáner de QR cuando se accede a la sección de escanear código, si no está ya inicializado
+    if (!html5QrCode) {
+        html5QrCode = new Html5Qrcode("qr-reader");
 
-    html5QrCode.start(
-        { facingMode: "environment" }, // Puede ser "user" para la cámara frontal
-        {
-            fps: 10, // Frecuencia de escaneo
-            qrbox: { width: 300, height: 300 } // Dimensiones del área de escaneo
-        },
-        onScanSuccess,
-        onScanFailure
-    ).catch(err => {
-        console.error(`No se pudo iniciar el escaneo: ${err}`);
-    });
+        html5QrCode.start(
+            { facingMode: "environment" }, // Puede ser "user" para la cámara frontal
+            {
+                fps: 10, // Frecuencia de escaneo
+                qrbox: { width: 300, height: 300 } // Dimensiones del área de escaneo
+            },
+            onScanSuccess,
+            onScanFailure
+        ).catch(err => {
+            console.error(`No se pudo iniciar el escaneo: ${err}`);
+        });
+    }
 }
 
 // Función para verificar si un elemento está en el centro de la vista del contenedor
@@ -142,24 +145,6 @@ function goToImageById() {
     if (imageId.trim() === '') {
         // Mostrar mensaje de alerta si no hay ningún ID en el input
         alert('No se ha escaneado ningún ID');
-
-        // Reiniciar el escáner de QR
-        html5QrCode.stop().then(ignore => {
-            html5QrCode.start(
-                { facingMode: "environment" }, // Puede ser "user" para la cámara frontal
-                {
-                    fps: 10, // Frecuencia de escaneo
-                    qrbox: { width: 300, height: 300 } // Dimensiones del área de escaneo
-                },
-                onScanSuccess,
-                onScanFailure
-            ).catch(err => {
-                console.error(`No se pudo reiniciar el escaneo: ${err}`);
-            });
-        }).catch(err => {
-            console.error(`No se pudo detener el escaneo: ${err}`);
-        });
-
         return;
     }
 
@@ -203,6 +188,7 @@ function onScanFailure(error) {
     // Manejar errores de escaneo aquí
     console.warn(`Error en el escaneo: ${error}`);
 }
+
 
 
 // Función para aplicar el efecto de aumento de tamaño
