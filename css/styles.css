@@ -243,7 +243,7 @@ button.goToMain:hover {
     border-radius: 5px;
     font-size: 0.38em;
     font-weight: bold;
-    font-family: Calibri;
+    font-family: Arial;
     z-index: 1;
 }
 
@@ -282,8 +282,8 @@ button.goToMain:hover {
     left: 241.5px; /* Ajusta la posición horizontal del séptimo texto */
 }
 
-.Tarjeta {
-    top: 145px; /* Ajusta la posición vertical del octavo texto */
+.Nota {
+    top: 160px; /* Ajusta la posición vertical del octavo texto */
     left: 294.5px; /* Ajusta la posición horizontal del octavo texto */
 }
 
