@@ -282,11 +282,15 @@ button.goToMain:hover {
     left: 241.5px; /* Ajusta la posición horizontal del séptimo texto */
 }
 
-.Nota {
-    top: 150px; /* Ajusta la posición vertical del octavo texto */
-    left: 294.5px; /* Ajusta la posición horizontal del octavo texto */
+.Tarjeta {
+    top: 145px; /* Ajusta la posición vertical del cuarto texto */
+    left: 294.5px; /* Ajusta la posición horizontal del cuarto texto */
 }
 
+.Nota {
+    top: 160px; /* Ajusta la posición vertical del cuarto texto */
+    left: 149px; /* Ajusta la posición horizontal del cuarto texto */
+}
 
 
 /* Estilos para la sección "Escanear código" */
