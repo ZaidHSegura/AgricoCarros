@@ -233,7 +233,7 @@ button.goToMain:hover {
     font-size: 0.4em; /* Tamaño de la fuente */
     z-index: 1; /* Asegura que el texto esté sobre la imagen */
     font-weight: bold; /* Establece el texto en negritas */
-    font-family: Calibri; /* Cambia el tipo de fuente */
+    font-family: Arial; /* Cambia el tipo de fuente */
 }
 
 .text-Date {
@@ -287,10 +287,6 @@ button.goToMain:hover {
     left: 294.5px; /* Ajusta la posición horizontal del octavo texto */
 }
 
-.Notas {
-    top: 145px; /* Ajusta la posición vertical del quinto texto */
-    left: 133.5px; /* Ajusta la posición horizontal del quinto texto */
-}
 
 
 /* Estilos para la sección "Escanear código" */
