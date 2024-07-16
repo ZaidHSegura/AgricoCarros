@@ -363,9 +363,36 @@ button.goToMain:hover {
 .irButton {
     background-color: grey; /* Color original */
     color: white;
+    border: none; /* Quitar el marco */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px 15px; /* Tamaño del botón */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar por el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones para suavizar cambios */
+}
+
+
+.irButton {
+    background-color: grey; /* Color original */
+    color: white;
+    border: none; /* Quitar el marco */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 40px; /* Tamaño del botón (igual que .goBack) */
+    font-size: 1em; /* Tamaño del texto (igual que .goBack) */
+    cursor: pointer; /* Cambiar el cursor al pasar por el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones para suavizar cambios */
+    margin: 10px; /* Añadir margen alrededor del botón (igual que .goBack) */
+}
+
+.irButton:hover {
+    background-color: darkgrey; /* Color al pasar el mouse */
+    transform: scale(1.05); /* Aumentar tamaño al pasar el mouse */
 }
 
 .irButton.scanned {
-    background-color: green; /* Cambia este color al que prefieras */
+    background-color: #2ECC71 ; /* Color cuando se escanea el código */
     color: white;
 }
+
+
+
