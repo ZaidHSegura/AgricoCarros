@@ -218,7 +218,7 @@ button.goToMain:hover {
     font-size: 0.4em; /* Tamaño de la fuente */
     z-index: 1; /* Asegura que el texto esté sobre la imagen */
     font-weight: bold; /* Establece el texto en negritas */
-    font-family: Calibri; /* Cambia el tipo de fuente */
+    font-family: Arial; /* Cambia el tipo de fuente */
 }
 
 /* Estilos para el texto sobre las imágenes */
@@ -283,7 +283,7 @@ button.goToMain:hover {
 }
 
 .Nota {
-    top: 160px; /* Ajusta la posición vertical del octavo texto */
+    top: 150px; /* Ajusta la posición vertical del octavo texto */
     left: 294.5px; /* Ajusta la posición horizontal del octavo texto */
 }
 
