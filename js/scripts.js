@@ -156,7 +156,7 @@ function goToImageById() {
         imageElement.style.border = '2px solid green';
         setTimeout(() => {
             imageElement.style.border = '';
-        }, 2000);
+        }, 5000);
 
         // Limpiar el valor del input
         imageIdInput.value = '';
