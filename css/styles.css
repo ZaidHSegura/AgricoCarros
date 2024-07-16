@@ -360,21 +360,12 @@ button.goToMain:hover {
     color: #333;
 }
 
-/* Estilo para el botón "Ir" */
 .irButton {
-    padding: 10px 42px;
-    border: none;
-    background-color: #b8bfba; /* Color azul acero */
-    color: #fff; /* Texto blanco */
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 10px; /* Añadir margen alrededor del botón */
+    background-color: grey; /* Color original */
+    color: white;
 }
 
-/* Estilo para el estado de escaneo exitoso */
 .irButton.scanned {
-    background-color: #4CAF50; /* Color verde para indicar éxito */
+    background-color: green; /* Cambia este color al que prefieras */
+    color: white;
 }
-
