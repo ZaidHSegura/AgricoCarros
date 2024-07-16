@@ -287,6 +287,11 @@ button.goToMain:hover {
     left: 294.5px; /* Ajusta la posición horizontal del octavo texto */
 }
 
+.Notas {
+    top: 250px; /* Ajusta la posición vertical del octavo texto */
+    left: 294.5px; /* Ajusta la posición horizontal del octavo texto */
+}
+
 
 /* Estilos para la sección "Escanear código" */
 #scanCodeContent {
